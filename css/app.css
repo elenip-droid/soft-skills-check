@@ -298,8 +298,12 @@ h1:focus, h2:focus { outline: none; }
 
 .disclaimer { margin: 22px 0 16px; font-size: .88rem; color: var(--text-2); text-align: center; }
 .actions { display: grid; gap: 10px; }
-@media (min-width: 640px) { .actions { grid-template-columns: 1.3fr 1fr 1fr; } }
-.print-logo, .print-foot { display: none; }
+@media (min-width: 640px) { .actions { grid-template-columns: 1.3fr 1fr; } .actions-one { grid-template-columns: 1fr; } }
+.shared-note {
+  display: grid; gap: 12px; margin: 0 0 18px; padding: 16px;
+  border-radius: 18px; background: var(--chip-bg); border: 1px solid var(--chip-line);
+}
+.shared-note p { margin: 0; font-weight: 700; }
 
 @media (min-width: 900px) {
   .app { max-width: 760px; }
@@ -307,23 +311,4 @@ h1:focus, h2:focus { outline: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-}
-
-/* ---------- εκτύπωση / PDF ---------- */
-@media print {
-  @page { margin: 14mm; }
-  :root, :root[data-theme="dark"] {
-    --bg: #fff; --surface: #fff; --surface-2: #FFF4EA; --text: #14213D; --text-2: #5A6176;
-    --line: #EBD5C3; --shadow: none; --track: #F3E6DB;
-    --chip-bg: #E2F0FA; --chip-ink: #1A5E92; --chip-line: #B9DBF2;
-  }
-  body { background: #fff !important; }
-  .app { max-width: none; padding: 0; }
-  .bar, .actions, .hint { display: none !important; }
-  .print-logo { display: block; height: 44px; width: auto; margin-bottom: 18px; }
-  .print-foot { display: block; margin-top: 12px; text-align: center; font-size: 10pt; color: var(--text-2); }
-  .screen, .skill-card, .bat-tile { animation: none !important; }
-  .hl, .bat-tile, .skill-card { break-inside: avoid; }
-  .meter-fill, .bat-fill { transition: none; }
-  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }

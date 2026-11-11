@@ -1,6 +1,6 @@
 // Offline: όλα τα αρχεία μπαίνουν στην cache στην εγκατάσταση.
 // Αλλάξτε το VERSION σε κάθε νέα έκδοση ώστε οι συσκευές να πάρουν τα καινούργια αρχεία.
-const VERSION = 'ssq-v4';
+const VERSION = 'ssq-v5';
 const FILES = [
   './',
   'index.html',
