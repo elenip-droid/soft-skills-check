@@ -1,0 +1,18 @@
+{
+  "name": "Soft Skills Check · SKG Education",
+  "short_name": "Soft Skills",
+  "description": "Quiz για τους αποφοίτους των bootcamps της SKG Education: ποσοστό και συμβουλές για έξι soft skills.",
+  "lang": "el",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF7F0",
+  "theme_color": "#E8590C",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
